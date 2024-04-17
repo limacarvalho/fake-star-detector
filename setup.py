@@ -6,15 +6,13 @@ setup(
     name="fake_star_detector",
     packages=find_packages(exclude=["fake_star_detector_tests"]),
     # package data paths are relative to the package key
-    package_data={
-        "fake_star_detector": ["../" + path for path in glob.glob("dbt_project/**", recursive=True)]
-    },
+    package_data={"fake_star_detector": ["../" + path for path in glob.glob("dbt_project/**", recursive=True)]},
     install_requires=[
         "dagster==1.2.2",
         "dagster-cloud[serverless]==1.2.2",
         "dagster-dbt==0.18.2",
         "PyGithub",
-	"Pydantic<2",
+        "Pydantic<2",
         "pandas==1.5.3",
         "matplotlib",
         "nbconvert",
